@@ -1,0 +1,69 @@
+.car-img {
+  width: 95%;
+}
+.chevron-small {
+  height: 10px;
+}
+.Home a {
+  text-decoration: none;
+  margin: 5px 10px;
+}
+.Home .links {
+  display: inline-flex;
+}
+.Home .car-detail {
+  text-align: justify;
+}
+button{
+    border: none;
+    background: none;
+}
+@media only screen and (max-width: 600px) {
+  .button-nav {
+    display: none !important;
+  }
+  .carfilter {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  .model-name-type{
+      display: flex;
+      flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .button-nav {
+    display: none !important;
+  }
+  .carfilter {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+  .model-name-type{
+    display: flex;
+    flex-direction: column;
+}
+}
+@media only screen and (min-width: 769px) {
+  .button-prev {
+    transform: rotate(180deg);
+    height: 30px;
+  }
+  .button-next {
+    height: 30px;
+  }
+  .button-nav {
+    flex-direction: row !important;
+    justify-content: flex-end;
+    margin: 10px;
+  }
+  .carfilter {
+    width: 15%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  .model-name-type{
+    display: flex;
+    flex-direction: row;
+}
+}
