@@ -64,6 +64,6 @@ button{
   }
   .model-name-type{
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
 }
 }

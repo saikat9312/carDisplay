@@ -1,41 +1,61 @@
-# Volvo Cars (Global Online Digital) 
-## Front-end coding test (React)
+# Volvo Cars (Global Online Digital)
 
-Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
+This is a [React.js](https://reactjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Here is how the design look like for desktop and mobile (files are stored under `docs` folder)
+## Getting Started
 
-### Desktop
-![ProductListDesktop](./docs/ProductList-Desktop.png)
+First, run the custom development server:
 
-### Mobile
-![ProductListDesktop](./docs/ProductList-Mobile.png)
-
-The data required to render the design is under `public/api/cars.json` folder. You need to fetch the data from the client side and render it in the browser. The data looks like this: 
-
-```json
-[
-    {
-      "id": "xc90-recharge",
-      "modelName": "XC90 Recharge", 
-      "bodyType": "suv",
-      "modelType": "plug-in hybrid",
-      "imageUrl": "/images/xc90_recharge.jpg"
-    }
-]
+```bash
+yarn
+&&
+yarn start
 ```
 
-The product owner is telling you that you can generate the links to the learn and shop pages of each car by concatating the `id` of the car to the learn (`/learn/`) and shop (`/shop/`) urls.
+Or
 
-Two extra SVG icons are also provided by our designer which are stored under `docs` folder.
+```bash
+npm i
+&&
+npm start
+```
 
-## Requirements
-- The project is bootstraped using create-react-app.
-- Browser support is modern ever-green browsers.
-- Implement this design using React and Typescript.
-- Accessibility is important.
-- Code Structure and reusablity is important.
+**Note:** Custom server is created to ease the monitoring of code change during developement, rather than build and run every time. No additional server functioanlity is added, but the future scope is there to use this custom server as per requirement.
 
-## Bonus Points:
-- If you use our design system component library, [VCC-UI](https://vcc-ui.netlify.app)
-- If you add a filter bar on the top to filter cars by `bodyType`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Features:
+
+1. Initial landing page displays carousel of cars which is created using [react-slick](https://www.npmjs.com/package/react-slick)
+2. After the initial launch, user is able to filter the results (based on `bodyType`) with help of provided filters.
+3. Clcking on Learn/Shop will redirect you to the respective dynamic page. URL will be changed according to the car id.
+4. A mobile-first design approach is implemented using modular css where,
+   - device < 600px will render 1 and the fraction of second card in the view area. (Mobile View)
+   - 601px < device < 768px will render 1 and fthe raction of second card in the view area. (Tab View)
+   - devices > 768px will render 4 cards in the view area. (Laptop/Desktop View)
+
+## Asumptions:
+
+1. Each button click will trigger an api call along with the query stirng to get the filtered results. The page will be client side rendered.
+2. The state has not been persisted. State was handled locally without using any additional library (Eg., Redux) to avoid unnecessary app size increase.
+3. CSS Media query and [VCC-UI](https://vcc-ui.netlify.app) component library have been used for this responsive design.
+4. Error handling is not implemented.
+
+## Project Structure:
+
+1. index.tsx is the staring file in this repository. 
+2. App.tsx is used for router setup and layout.
+3. All the screens/pages are under `view` folder. 3 components are added under the `view` folder.
+   - `Home.tsx` for car display carousel and filter.
+   - `Learn.tsx` for learn about the car page.
+   - `Shop.tsx` for shop the car page
+   - cardItemList for list of card item. This component is dynamically imported to index.js to improve performance
+3. Style folder contains modular css file for each component.
+
+## Screenshots
+
+![VolvoCars](/public/SS_desktop.png?raw=true "Desktop View")
+
+![VolvoCars](/public/SS_Tab.png?raw=true "Tab View")
+
+![VolvoCars](/public/SS_Mobile.png?raw=true "Mobile View")
