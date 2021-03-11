@@ -49,11 +49,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
    - `Home.tsx` for car display carousel and filter.
    - `Learn.tsx` for learn about the car page.
    - `Shop.tsx` for shop the car page
-   - cardItemList for list of card item. This component is dynamically imported to index.js to improve performance
 
 ## Screenshots
 
-![VolvoCars](/public/screenshot/SS_desktop.png?raw=true "Desktop View")
+![VolvoCars](/public/screenshot/SS_Desktop.png?raw=true "Desktop View")
 
 ![VolvoCars](/public/screenshot/SS_Tab.png?raw=true "Tab View")
 
