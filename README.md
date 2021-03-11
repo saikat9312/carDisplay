@@ -31,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 3. Clcking on Learn/Shop will redirect you to the respective dynamic page. URL will be changed according to the car id.
 4. A mobile-first design approach is implemented using modular css where,
    - device < 600px will render 1 and the fraction of second card in the view area. (Mobile View)
-   - 601px < device < 768px will render 1 and fthe raction of second card in the view area. (Tab View)
+   - 601px < device < 768px will render 1 and the fraction of second card in the view area. (Tab View)
    - devices > 768px will render 4 cards in the view area. (Laptop/Desktop View)
 
 ## Asumptions:
@@ -43,19 +43,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Project Structure:
 
-1. index.tsx is the staring file in this repository. 
-2. App.tsx is used for router setup and layout.
+1. `index.tsx` is the staring file in this repository. 
+2. `App.tsx` is used for router setup and layout.
 3. All the screens/pages are under `view` folder. 3 components are added under the `view` folder.
    - `Home.tsx` for car display carousel and filter.
    - `Learn.tsx` for learn about the car page.
    - `Shop.tsx` for shop the car page
    - cardItemList for list of card item. This component is dynamically imported to index.js to improve performance
-3. Style folder contains modular css file for each component.
 
 ## Screenshots
 
-![VolvoCars](/public/SS_desktop.png?raw=true "Desktop View")
+![VolvoCars](/public/screenshot/SS_desktop.png?raw=true "Desktop View")
 
-![VolvoCars](/public/SS_Tab.png?raw=true "Tab View")
+![VolvoCars](/public/screenshot/SS_Tab.png?raw=true "Tab View")
 
-![VolvoCars](/public/SS_Mobile.png?raw=true "Mobile View")
+![VolvoCars](/public/screenshot/SS_Mobile.png?raw=true "Mobile View")
